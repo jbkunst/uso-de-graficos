@@ -1,0 +1,61 @@
+---
+title: "<br>Uso Adecuado de Gráficos<br><small><b>VIS</b>DATA | SANTIAGO_SCL</small><br>"
+author: "Joshua Kunst, Enero 2018<br>"
+output:
+  revealjs::revealjs_presentation:
+    lib_dir: libs
+    self_contained: false
+    reveal_plugins: ["zoom"]
+    mathjax: null
+    transition: fade
+    css: ["css/styles.css"]   
+    incremental: true
+    center: false
+    theme: simple
+    fig_width: 6
+    fig_height: 3.5
+    reveal_options:
+      slideNumber: true
+      controls: false
+      mouseWheel: false
+editor_options: 
+  chunk_output_type: console
+---
+
+## ¿Que haremos?
+
+```{r, include = FALSE}
+source("R/setup.R")
+```
+
+
+> - Tipos de Gráficos
+>      * Pie y sus variantes
+>      * Barras 3D
+> - Colores
+> - Fuentes
+>      * Tipos de fuentes
+>      * Tamaño
+> - Saturacion de Información
+
+
+
+# ¿Qué es shiny? { .center .white data-background="#75AADB"}
+
+## ¿Qué es shiny?
+
+- Es un paquete para construir aplicaciones web usando solamente
+código 
+- De forma __fácil__<span class="fragment">. Sin aprender o saber de `HTML`</span><span class="fragment">, `Javascript`</span><span class="fragment"> `CSS`</span><span class="fragment"> frontend</span><span class="fragment"> o backend</span>
+
+## Sources
+
+https://www.kubicle.com/blog/data-visualization-mistakes
+https://thenextweb.com/dd/2015/05/15/7-most-common-data-visualization-mistakes/
+https://datahero.com/blog/2013/10/10/5-most-common-data-analysis-mistakes/
+https://www.undullify.com/data-visualization-102-common-mistakes-visualizing-data/
+https://designroast.org/the-7-most-common-data-visualization-mistakes/
+https://www.highcharts.com/blog/post/182-7-most-common-chart-mistakes/
+https://iase-web.org/islp/documents/Media/How%20To%20Avoid.pdf
+
+
