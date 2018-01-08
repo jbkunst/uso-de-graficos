@@ -22,6 +22,8 @@ editor_options:
   chunk_output_type: console
 ---
 
+# { data-background="img/data-culture.jpg"}
+
 ## Estructura
 
 ```{r, include = FALSE}
@@ -33,10 +35,91 @@ source("R/setup.R")
 - Recomendaciones Técnicas
 - Recomendaciones Visuales
 
+# Visualización de datos { .left data-background="img/data-visualization-tools-concept.png"}
 
-# Visualización de datos { .center .white data-background="#75AADB"}
+## (Posible) Definición técnica:
 
-## Visualización de datos
+Representación gráfica de datos __codificando la información__ como: posición, tamaño, formas, colores
+
+<img src="img/data-viz.jpg" width="60%">
+
+----
+
+```{r, echo=FALSE, fig.width=8, fig.height=6}
+data(gapminder, package = "gapminder")
+
+gapminder %>% 
+  group_by(country) %>% 
+  filter(row_number() == n()) %>% 
+  ungroup() %>% 
+  ggplot() + 
+  geom_point(aes(lifeExp, gdpPercap, size = pop, color = continent), alpha = 0.7) +
+  scale_color_viridis(option = "D", discrete = TRUE) + 
+  scale_y_sqrt(name = "GDP per Capita", labels = comma, limits = c(NA, NA)) +
+  scale_x_continuous(name = "Esperanza de vida", labels = comma, limits = c(NA, NA)) +
+  scale_size(labels = comma, range = c(3, 10), breaks = c(100, 1000, 2000)*1e6)
+```
+
+----
+
+```{r, echo=FALSE, fig.width=8, fig.height=6}
+# install.packages(c("rgexf", "ggnetwork", "intergraph"))
+# 316
+library(tidyverse)
+library(viridis)
+library(igraph)
+library(rgexf)
+library(stringr)
+library(ggnetwork)
+library(ggrepel)
+
+net <- "http://media.moviegalaxies.com/gexf/92.gexf" %>% 
+  read_lines() %>% 
+  read.gexf() %>% 
+  gexf.to.igraph()
+
+V(net)$name <- str_to_title(V(net)$name)
+V(net)$label <- V(net)$name %>% 
+  str_extract_all("^\\w{2}| \\w") %>% 
+  map_chr(function(x) {
+    x %>% unlist() %>% str_c(collapse = "")
+  })
+V(net)$size <- page.rank(net)$vector
+cl <- cluster_fast_greedy(net)
+V(net)$comm <- membership(cl)
+
+f <- colorRamp(viridis::inferno(10))
+c <- (V(net)$comm/max(V(net)$comm)) %>% f() %>% {./255} %>% rgb()
+V(net)$color <- c
+
+# head(ggnetwork(net))
+set.seed(123)
+ggnet <- ggnetwork(net)
+dfnet2 <- ggnet %>%
+  as.matrix() %>%
+  as.data.frame() %>%
+  tbl_df() %>%
+  select(x, y, vertex.names, weight, size) %>%
+  mutate_all(as.character) %>%
+  mutate_at(vars(x, y, weight, size), as.numeric) %>%
+  filter(is.na(weight))
+
+ggplot(ggnet) + 
+  geom_edges(aes(x, y, size = width, color = factor(comm),
+           xend = xend, yend = yend), color = "gray", size = 1, alpha = 0.5) +
+  geom_point(aes(x, y, size = size, color = factor(comm))) +
+  geom_text_repel(aes(x, y, label = vertex.names, size = size),
+                  data = dfnet2, color = "#666666",
+                  family = "Roboto Condensed") +
+  scale_color_viridis(discrete = TRUE) + 
+  theme_blank() +
+  labs(size = "Pagerank", color = "Comunidad")
+```
+
+----
+
+
+
 
 ## Tipos de Graficos
 
@@ -48,6 +131,8 @@ source("R/setup.R")
 
 # Sources
 
+https://twitter.com/lisacrost/status/948236414788960256
+https://pbs.twimg.com/media/DS1PLx_VwAEvEce.jpg
 https://www.kubicle.com/blog/data-visualization-mistakes
 https://thenextweb.com/dd/2015/05/15/7-most-common-data-visualization-mistakes/
 https://datahero.com/blog/2013/10/10/5-most-common-data-analysis-mistakes/
