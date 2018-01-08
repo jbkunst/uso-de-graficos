@@ -22,33 +22,31 @@ editor_options:
   chunk_output_type: console
 ---
 
-## ¿Que haremos?
+## Estructura
 
 ```{r, include = FALSE}
 source("R/setup.R")
 ```
 
-
-> - Tipos de Gráficos
->      * Pie y sus variantes
->      * Barras 3D
-> - Colores
-> - Fuentes
->      * Tipos de fuentes
->      * Tamaño
-> - Saturacion de Información
+- Visualización de datos    
+- Existe el mejor gráfico
+- Recomendaciones Técnicas
+- Recomendaciones Visuales
 
 
+# Visualización de datos { .center .white data-background="#75AADB"}
 
-# ¿Qué es shiny? { .center .white data-background="#75AADB"}
+## Visualización de datos
 
-## ¿Qué es shiny?
+## Tipos de Graficos
 
-- Es un paquete para construir aplicaciones web usando solamente
-código 
-- De forma __fácil__<span class="fragment">. Sin aprender o saber de `HTML`</span><span class="fragment">, `Javascript`</span><span class="fragment"> `CSS`</span><span class="fragment"> frontend</span><span class="fragment"> o backend</span>
+# ¿Existe el mejor gráfico?
 
-## Sources
+# Recomendaciones Técnicas
+
+# Recomendaciones Visuales
+
+# Sources
 
 https://www.kubicle.com/blog/data-visualization-mistakes
 https://thenextweb.com/dd/2015/05/15/7-most-common-data-visualization-mistakes/
