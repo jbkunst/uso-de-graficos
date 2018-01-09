@@ -53,6 +53,8 @@ Representación gráfica de datos __codificando la información__ como: posició
 
 <img src="img/data-viz.jpg" width="60%">
 
+## { data-background="img/catalogue.png"}
+
 ## Visualización
 
 Cosas importantes
