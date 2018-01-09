@@ -270,7 +270,7 @@ No. Dependerá de tu mensaje, de tu historia.
 Usuales dificultades
 
 - Compara áreas
-- Ejericio mental de rotar para comparar categorías
+- Ejercicio mental de rotar para comparar categorías
 
 ----
 
@@ -356,6 +356,10 @@ ggplot(data2, aes(factor(tiempo), indice)) +
 <!-- https://twitter.com/MetricsHulk/status/735913911212515329 -->
 
 <img src="https://pbs.twimg.com/media/CjZ9zUjWUAAkWEt.jpg" width="40%" />
+
+## Convenciones
+
+<img src="img/gun.jpg" width="40%" />
 
 # Recomendaciones Estilo { .center .white data-background="#607D8B"}
 
