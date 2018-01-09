@@ -1,0 +1,17 @@
+region	cuarto	valor
+sur	Q1	100
+sur	Q2	150
+sur	Q3	225
+sur	Q4	290
+norte	Q1	150
+norte	Q2	160
+norte	Q3	180
+norte	Q4	300
+este	Q1	180
+este	Q2	200
+este	Q3	200
+este	Q4	240
+oeste	Q1	250
+oeste	Q2	250
+oeste	Q3	300
+oeste	Q4	170
