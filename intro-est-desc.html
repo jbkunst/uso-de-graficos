@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="generator" content="pandoc">
   <meta name="author" content="Joshua Kunst, Enero 2018" />
-  <title> Uso Adecuado de Gráficos VISDATA | SANTIAGO_SCL</title>
+  <title> Introducción Estadística (descriptiva) VISDATA | SANTIAGO_SCL</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -450,211 +450,90 @@ document.getElementsByTagName('head')[0].appendChild(style);
     <div class="slides">
 
 <section>
-    <h1 class="title"><br>Uso Adecuado de Gráficos<br><small><b>VIS</b>DATA | SANTIAGO_SCL</small><br></h1>
+    <h1 class="title"><br>Introducción Estadística (descriptiva)<br><small><b>VIS</b>DATA | SANTIAGO_SCL</small><br></h1>
     <h2 class="author">Joshua Kunst, Enero 2018<br></h2>
 </section>
 
-<section><section id="section" class="titleslide slide level1" data-background="img/data-culture.jpg"><h1></h1></section><section id="estructura" class="slide level2">
-<h2>Estructura</h2>
-<p>Viajaremos por:</p>
+<section><section id="jergas-definiciones" class="titleslide slide level1 center white" data-background="#75AADB"><h1>Jergas &amp; Definiciones</h1></section><section id="estadistica" class="slide level2">
+<h2>Estadística</h2>
 <ul>
-<li class="fragment">Visualización de datos</li>
-<li class="fragment">Definiciones</li>
-<li class="fragment">Recomendaciones Técnicas &amp; Visuales</li>
-<li class="fragment">Ejercicios y concursos</li>
+<li class="fragment">Les suena?</li>
+<li class="fragment">Han hecho algún curso?</li>
+<li class="fragment">Hasta donde han llegado?</li>
 </ul>
-</section><section id="section-1" class="slide level2" data-background="https://media.giphy.com/media/LNE01Z89j9gis/giphy.gif">
-<h2></h2>
-</section></section>
-<section><section id="visualizacion-de-datos" class="titleslide slide level1 center white" data-background="#75AADB"><h1>Visualización de datos</h1></section><section id="section-2" class="slide level2" data-background="http://img.kiosko.net/2017/07/18/uk/ft_uk.750.jpg">
-<h2></h2>
-</section><section id="section-3" class="slide level2" data-background="https://pbs.twimg.com/media/DSNbnLrXkAAibaB.jpg">
-<h2></h2>
-<!-- https://twitter.com/sdbernard/status/946701218298126341  -->
-</section><section id="posible-definicion-tecnica" class="slide level2">
-<h2>(Posible) Definición técnica:</h2>
-<p>Representación gráfica de datos <strong>codificando la información</strong> como: posición, tamaño, formas, colores</p>
-<p><img src="img/data-viz.jpg" width="60%"></p>
-</section><section id="section-4" class="slide level2" data-background="img/catalogue.png">
-<h2></h2>
-</section><section id="visualizacion" class="slide level2">
-<h2>Visualización</h2>
-<p>Cosas importantes</p>
+</section><section id="definiciones" class="slide level2">
+<h2>Definiciones</h2>
 <ul>
-<li class="fragment">Lleva información, es un mensaje</li>
-<li class="fragment">Ejercicio mental para interpretar o <strong>decodificar</strong>(!!) información</li>
-<li class="fragment">No siempre es el fin</li>
-<li class="fragment">Herramienta exploratoria</li>
-<li class="fragment">Distintas visualizaciones en mismos datos / Distintas historias</li>
+<li class="fragment">Estadística. Rama matemática que estudia observaciones/mediciones de una población (usualmente de una muestra)</li>
+<li class="fragment">Población. Conjunto de individuos, elementos de interés</li>
+<li class="fragment">Muestra. Una parte (subconjunto) de la población</li>
 </ul>
+</section><section id="tipos-de-estadistica" class="slide level2">
+<h2>Tipos de Estadística</h2>
+<p>Descriptiva e Inferencial</p>
+<p><img src="img/types.png"></p>
+</section><section id="tipos-de-estadistica-1" class="slide level2">
+<h2>Tipos de Estadística</h2>
+<p><img src="http://doingstats.com/img/stats_process.gif"></p>
+</section><section id="distribucion" class="slide level2">
+<h2>Distribución</h2>
+<p>Distribución se relaciona a la forma que varían los datos de medición en medición</p>
+<p><span class="fragment">Estudiando la forma de como se distribuyen los datos podemos ver cuales son los más comunes, o ver si exsiten casos raros<span></p>
 </section><section class="slide level2">
 
-<p><img src="img/pres1unnamed-chunk-2-1.svg" width="768" /></p>
+<p>Según la forma de la distribución, existen categorías:</p>
+<p><img src="img/pres2unnamed-chunk-2-1.svg" width="768" /></p>
 </section><section class="slide level2">
 
-<p><img src="img/pres1unnamed-chunk-3-1.svg" width="768" /></p>
+<p>Existen otras alternativas. En datos simétricos:</p>
+<p><img src="img/pres2unnamed-chunk-3-1.svg" width="768" /></p>
 </section><section class="slide level2">
 
-<p><img src="img/pres1unnamed-chunk-4-1.svg" width="768" /></p>
+<p>Datos bimodales</p>
+<p><img src="img/pres2unnamed-chunk-4-1.svg" width="768" /></p>
 </section><section class="slide level2">
 
-<p><img src="img/pres1unnamed-chunk-5-1.svg" width="768" /></p>
+<p>Datos uniformemente distribuídos</p>
+<p><img src="img/pres2unnamed-chunk-5-1.svg" width="768" /></p>
 </section><section class="slide level2">
 
-<p><img src="img/pres1unnamed-chunk-6-1.svg" width="768" /></p>
-</section><section id="existe-el-mejor-grafico" class="slide level2 left" data-background="img/data-visualization-tools-concept.png">
-<h2>¿Existe el mejor gráfico?</h2>
-</section><section id="ejercicio" class="slide level2">
-<h2>Ejercicio</h2>
-<p>Cual de las siguientes formas funciona mejor con el títutlo:</p>
-<p><span class="fragment"> <em>La región del sur exhibe el mayor crecimiento</em> <br> <small> Adapatado del tweet de <a href="https://twitter.com/lisacrost/status/948233069110222848">Lisa Charlotte Rost</a> que a su vez está viene del ejemplo del libro “Show me the numbers” de Stephen Few </small> </span></p>
-</section><section id="ejercicio-1" class="slide level2">
-<h2>Ejercicio</h2>
-<p>Los datos:</p>
-<table>
-<thead>
-<tr class="header">
-<th style="text-align: left;">region</th>
-<th style="text-align: right;">Q1</th>
-<th style="text-align: right;">Q2</th>
-<th style="text-align: right;">Q3</th>
-<th style="text-align: right;">Q4</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: left;">sur</td>
-<td style="text-align: right;">100</td>
-<td style="text-align: right;">150</td>
-<td style="text-align: right;">225</td>
-<td style="text-align: right;">290</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">norte</td>
-<td style="text-align: right;">150</td>
-<td style="text-align: right;">160</td>
-<td style="text-align: right;">180</td>
-<td style="text-align: right;">300</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">este</td>
-<td style="text-align: right;">180</td>
-<td style="text-align: right;">200</td>
-<td style="text-align: right;">200</td>
-<td style="text-align: right;">240</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">oeste</td>
-<td style="text-align: right;">250</td>
-<td style="text-align: right;">250</td>
-<td style="text-align: right;">300</td>
-<td style="text-align: right;">170</td>
-</tr>
-</tbody>
-</table>
-</section><section class="slide level2">
-
-<p><img src="img/pres1unnamed-chunk-8-1.svg" width="768" /></p>
-</section><section class="slide level2">
-
-<p><img src="img/pres1unnamed-chunk-9-1.svg" width="768" /></p>
-</section><section class="slide level2">
-
-<p><img src="img/pres1unnamed-chunk-10-1.svg" width="768" /></p>
-</section><section class="slide level2">
-
-<p><img src="img/pres1unnamed-chunk-11-1.svg" width="1152" /></p>
-</section><section id="posible-respuesta" class="slide level2">
-<h2>(Posible) Respuesta</h2>
-<p><br> No. Dependerá de tu mensaje, de tu historia.</p>
+<p>Variable Asimétrica</p>
+<p><img src="img/pres2unnamed-chunk-6-1.svg" width="768" /></p>
 </section></section>
-<section><section id="recomendaciones-tecnicas" class="titleslide slide level1 center white" data-background="#F44336"><h1>Recomendaciones Técnicas</h1></section><section id="pie-charts-o-tortas" class="slide level2">
-<h2>Pie Charts (o tortas)</h2>
-<!-- https://twitter.com/MetricsHulk/status/728014668913102848 -->
-<p><img src="https://pbs.twimg.com/media/Chpte5BVEAA-ppy.jpg" width="80%"/></p>
-</section><section id="pie-charts-o-tortas-1" class="slide level2">
-<h2>Pie Charts (o tortas)</h2>
-<p>Usuales dificultades</p>
+<section><section id="estadistica-descriptiva" class="titleslide slide level1 center white" data-background="#4CAF50"><h1>Estadística Descriptiva</h1></section><section id="estadistica-descriptiva-1" class="slide level2">
+<h2>Estadística Descriptiva</h2>
+<p>Conjunto de procedimientos para <strong>resumir</strong> datos</p>
 <ul>
-<li class="fragment">Compara áreas</li>
-<li class="fragment">Ejercicio mental de rotar para comparar categorías</li>
+<li class="fragment">Medidas de tendencia central y dispersión<span class="fragment">. No solo basta con ver que valores puede tomar una variable<span></li>
+<li class="fragment">Visualización de datos<span class="fragment">. Distintos gráficos nos cuentan diferente información acerca de la variable(s)<span></li>
 </ul>
-</section><section class="slide level2">
-
-<p>Es muy usado es el <strong>pie chart</strong></p>
-<p><img src="img/pres1unnamed-chunk-12-1.svg" width="768" /></p>
-</section><section class="slide level2">
-
-<p>Es muy (<strong>ab</strong>)usado es el <strong>pie chart</strong></p>
-<p><img src="img/pres1unnamed-chunk-13-1.svg" width="768" /></p>
-</section><section class="slide level2">
-
-<p><img src="img/omgpie.gif" width="80%"></p>
-</section><section id="puntos-de-referencia" class="slide level2 right" data-background="img/map-location-pin.jpg">
-<h2>Puntos de Referencia</h2>
-</section><section id="puntos-de-referencia-1" class="slide level2">
-<h2>Puntos de Referencia</h2>
-<p><img src="img/pinera.jpg" ></p>
-</section><section id="puntos-de-referencia-2" class="slide level2">
-<h2>Puntos de Referencia</h2>
-<p><img src="img/pinera2.jpg" ></p>
-</section><section id="puntos-de-referencia-3" class="slide level2">
-<h2>Puntos de Referencia</h2>
-<p><img src="img/pres1unnamed-chunk-14-1.svg" width="768" /></p>
-</section><section id="convenciones-ejercicio-2" class="slide level2">
-<h2>Convenciones (Ejercicio 2)</h2>
-<!-- https://twitter.com/MetricsHulk/status/735913911212515329 -->
-<p><img src="https://pbs.twimg.com/media/CjZ9zUjWUAAkWEt.jpg" width="40%" /></p>
-</section><section id="convenciones" class="slide level2">
-<h2>Convenciones</h2>
-<p><img src="img/gun.jpg" width="40%" /></p>
-</section></section>
-<section><section id="recomendaciones-estilo" class="titleslide slide level1 center white" data-background="#607D8B"><h1>Recomendaciones Estilo</h1></section><section id="tipografia" class="slide level2">
-<h2>Tipografía</h2>
-<p>Conocen a ..?</p>
-<span class="fragment">
-<h1>
-<font face="Arial">Arial</font>
-</h1>
-</span> <span class="fragment">
-<h1>
-<font face="Times New Roman">Times New Roman</font>
-</h1>
-</span> <span class="fragment">
-<h1>
-<font face="Comic Sans MS">Comic Sans</font>
-</h1>
-<p></span></p>
-</section><section id="section-5" class="slide level2" data-background="img/comicsanscriminal.png">
-<h2></h2>
-</section><section id="cada-vez-que-veomos-comic-sans" class="slide level2 white right" data-background="https://media.giphy.com/media/7yDthHaq2haXS/giphy.gif">
-<h2>Cada vez que veo(mos) Comic Sans</h2>
-</section><section id="tipografia-1" class="slide level2">
-<h2>Tipografía</h2>
-<p>Según <font face="Comic Sans MS"><a href="http://www.comicsanscriminal.com/">comic sans criminal</a></font>:</p>
+<p><span class="fragment"><strong>Sintetizar información</strong><span></p>
+</section><section id="medidas-de-tendencia-y-dispersion" class="slide level2">
+<h2>Medidas de Tendencia y Dispersión</h2>
+<p>Son indicadores (generalmente un número) obtenidos de los datos que <strong>resumen</strong> información y nos hablan de alguna característica de la <strong>distribución</strong> de la variable</p>
+<p><span class="fragment">Nos ayudan a tener una idea más fina en <strong>donde se concentran</strong> las variables y que <strong>tan concentrados</strong> están los valores</span></p>
+</section><section id="medidas-de-tendencia-central" class="slide level2">
+<h2>Medidas de Tendencia Central</h2>
+<p>Nos señalan el valor en <em>torno al cual se concentran los datos</em></p>
 <ul>
-<li class="fragment">Fuentes tienen personalidad</li>
-<li class="fragment">Tiene un propósito</li>
-<li class="fragment">Armonía en el universo</li>
+<li><strong>Media</strong> o <strong>Promedio</strong>: La suma de los datos dividido por la cantidad de los mismos</li>
+<li>Mediana: Es el valor que está al medio cuando los datos se ordenan</li>
+<li>Moda: Es el valor que más se repite. Este se usa cuando la variable es <em>discreta</em></li>
 </ul>
-</section><section id="section-6" class="slide level2" data-background="https://i.pinimg.com/736x/a4/60/86/a460865501618b73cf64db7f4b345745--middle-earth-map-hobbit-party.jpg">
-<h2></h2>
-</section><section id="colores" class="slide level2">
-<h2>Colores</h2>
-<p>La misma idea de las convenciones!</p>
-</section><section id="colores-1" class="slide level2">
-<h2>Colores</h2>
-<p><img src="img/pres1unnamed-chunk-15-1.svg" width="768" /></p>
-</section><section id="colores-2" class="slide level2">
-<h2>Colores</h2>
-<p><img src="img/pres1unnamed-chunk-16-1.svg" width="768" /></p>
-</section><section id="colores-3" class="slide level2">
-<h2>Colores</h2>
-<p><img src="img/pres1unnamed-chunk-17-1.svg" width="768" /></p>
-</section><section id="section-7" class="slide level2" data-background="https://media.giphy.com/media/JzOyy8vKMCwvK/giphy.gif">
-<h2></h2>
+</section><section id="medidas-de-dispersion" class="slide level2">
+<h2>Medidas de Dispersión</h2>
+<p>Son valores que nos describen la dispersión de los datos. Es decir, <strong>que tan concentrados</strong> están:</p>
+<ul>
+<li><strong>Desviación estándar</strong>: Mide el grado de dispersión en torno a la media</li>
+<li>Rango: Es el tamaño del intervalo que cubren los datos, el mayor valor menos el mínimo</li>
+<li>Quantiles: Valores donde se acumula % de información</li>
+</ul>
+</section><section id="ejemplo-entrete" class="slide level2">
+<h2>Ejemplo entrete</h2>
+<p><a href="https://rawgit.com/juba/uniquanti/master/index.html" class="uri">https://rawgit.com/juba/uniquanti/master/index.html</a></p>
+</section><section id="programamos" class="slide level2">
+<h2>Programamos?</h2>
 </section></section>
-<section><section id="espero-haya-servido-conversemos" class="titleslide slide level1 center white" data-background="#673AB7"><h1>Espero haya servido! Conversemos!</h1></section></section>
     </div>
   </div>
 

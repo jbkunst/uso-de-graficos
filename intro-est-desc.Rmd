@@ -1,0 +1,150 @@
+---
+title: "<br>Introducción Estadística (descriptiva)<br><small><b>VIS</b>DATA | SANTIAGO_SCL</small><br>"
+author: "Joshua Kunst, Enero 2018<br>"
+output:
+  revealjs::revealjs_presentation:
+    lib_dir: libs
+    self_contained: false
+    reveal_plugins: ["zoom"]
+    mathjax: null
+    transition: fade
+    css: ["css/styles.css"]   
+    incremental: true
+    center: false
+    theme: simple
+    fig_width: 8
+    fig_height: 5.5
+    reveal_options:
+      slideNumber: true
+      controls: false
+      mouseWheel: false
+editor_options: 
+  chunk_output_type: console
+---
+
+# Jergas & Definiciones { .center .white data-background="#75AADB"}
+
+```{r, include = FALSE}
+source("R/setup.R")
+knitr::opts_chunk$set(fig.path = "img/pres2")
+```
+
+## Estadística
+
+- Les suena?
+- Han hecho algún curso?
+- Hasta donde han llegado?
+
+## Definiciones
+
+- Estadística. Rama matemática que estudia observaciones/mediciones de una población (usualmente de una muestra)
+- Población. Conjunto de individuos, elementos de interés
+- Muestra. Una parte (subconjunto) de la población
+
+## Tipos de Estadística
+
+Descriptiva e Inferencial
+
+<img src="img/types.png">
+
+## Tipos de Estadística
+
+<img src="http://doingstats.com/img/stats_process.gif">
+
+## Distribución
+
+Distribución se relaciona a la forma que varían los datos de medición en medición
+
+<span class="fragment">Estudiando la forma de como se distribuyen los datos podemos ver
+cuales son los más comunes, o ver si exsiten casos raros<span>
+
+----
+
+Según la forma de la distribución, existen categorías:
+
+```{r, echo=FALSE, fig.width=8, fig.height=5}
+ggplot(dfdist) +
+  geom_histogram(aes(value, fill = key)) +
+  facet_wrap(~key, scales = "free") +
+  scale_fill_viridis(discrete = TRUE, begin = .2, end = .8, option = "B") +
+  theme_null()
+```
+
+----
+
+Existen otras alternativas. En datos simétricos:
+
+```{r, echo=FALSE, fig.width=8, fig.height=5}
+gg_dists("Simetrica", "#420A68")
+```
+
+----
+
+Datos bimodales
+
+```{r, echo=FALSE, fig.width=8, fig.height=5}
+gg_dists("Bimodal", "#932667")
+```
+
+----
+
+Datos uniformemente distribuídos
+
+```{r, echo=FALSE, fig.width=8, fig.height=5}
+gg_dists("Uniforme", "#DD513A")
+```
+
+----
+
+Variable Asimétrica
+
+```{r, echo=FALSE, fig.width=8, fig.height=5}
+gg_dists("Asimetrica", "#FCA50A")
+```
+
+# Estadística Descriptiva { .center .white data-background="#4CAF50"}
+
+## Estadística Descriptiva
+
+Conjunto de procedimientos para __resumir__ datos
+
+- Medidas de tendencia central y dispersión<span class="fragment">. No solo basta con ver que valores puede tomar una variable<span>
+- Visualización de datos<span class="fragment">. Distintos gráficos nos cuentan diferente información acerca de la variable(s)<span>
+
+<span class="fragment">__Sintetizar información__<span>
+
+
+## Medidas de Tendencia y Dispersión
+
+Son indicadores (generalmente un número) obtenidos de los datos 
+que __resumen__ información y nos hablan de alguna característica de 
+la __distribución__ de la variable
+
+<span class="fragment">Nos ayudan a tener una idea más fina en __donde se concentran__
+las variables y que __tan concentrados__ están los valores</span>
+
+## Medidas de Tendencia Central
+
+Nos señalan el valor en _torno al cual se concentran los datos_
+
+>- __Media__ o __Promedio__: La suma de los datos dividido por la cantidad de los mismos
+>- Mediana: Es el valor que está al medio cuando los datos se ordenan
+>- Moda: Es el valor que más se repite. Este se usa cuando la variable es _discreta_
+
+## Medidas de Dispersión
+
+Son valores que nos describen la dispersión de los datos. Es decir, __que tan concentrados__ están:
+
+>- __Desviación estándar__: Mide el grado de dispersión en torno a la media
+>- Rango: Es el tamaño del intervalo que cubren los datos, el mayor valor menos el mínimo
+>- Quantiles: Valores donde se acumula % de información
+
+## Ejemplo entrete
+
+https://rawgit.com/juba/uniquanti/master/index.html
+
+## Programamos?
+
+
+
+

@@ -30,6 +30,7 @@ Viajaremos por:
 
 ```{r, include = FALSE}
 source("R/setup.R")
+knitr::opts_chunk$set(fig.path = "img/pres1")
 ```
 
 - Visualización de datos
